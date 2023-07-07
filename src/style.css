@@ -27,10 +27,6 @@ input {
 img {
 	max-width: 100%;
 	height: auto;
-	/* beta */
-	margin-left: 100px;
-	margin-right: 100px;
-	max-height: 100%;
 }
 
 a {
@@ -74,24 +70,6 @@ p {
 	margin-right: 10px;
 	font-size: 12px;
 	line-height: 14px;
-}
-
-/* calendar */
-
-.calendar {
-	margin-top: 30px;
-}
-
-.calendar-list {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	margin-left: -15px;
-	margin-right: -15px;
-}
-
-.calendar-item {
-	margin: 15px;
 }
 
 /* launches */
@@ -145,37 +123,6 @@ p {
 	.launches {
 		width: 310px;
 	}
-}
-
-/* details */
-
-.details-row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 30px;
-}
-
-.details-title {
-	font-size: 32px;
-	margin-bottom: 30px;
-}
-
-.details-image,
-.details-content {
-	margin: 0 30px;
-}
-
-.details-youtube {
-	margin: 0 auto;
-	display: block;
-}
-
-.button-back {
-	max-width: 200px;
-	display: block;
-	margin: 25px auto;
 }
 
 /* end */
