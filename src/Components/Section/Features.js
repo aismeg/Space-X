@@ -27,7 +27,7 @@ export const Feautres = () => (
                         <td className="table-column">30,146 kg / 66,460 lb</td>
                     </tr>
                     <tr>
-                        <td className="table-column">LADDIN TO LEO</td>
+                        <td className="table-column">LADDIN TE LEO</td>
                         <td className="table-column">450 kg / 992 lb</td>
                     </tr>
                 </thead>
@@ -36,9 +36,9 @@ export const Feautres = () => (
             <article>
                 <h3 className="features-subtitle">BESKREIVINN</h3>
                 <p className="features-text">
-                    De Falcon 1 vas ein forbrukbeer startsystem privat entveikt en manufactured by SpaceX during
-                    2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch
-                    vehicle to go into orbit around the Earth.
+                    De Falcon 1 vas ein forbrœkbeer startsystem privat entveikd en forstelled av SpaceX in
+                    2006-2009. Aa 28 September 2008, Falcon 1 blev de fjorst privat-entveikd startkeertjoj ved fljotinn brandstov
+                    te gaa in de erdbaan.
                 </p>
             </article>
         </div>

@@ -17,7 +17,7 @@ export const Footer = () => (
             </ul>
         </nav>
         <p className="footer-text">
-            For additional questions, contact
+            For tefullinn fraaje, kontakt&#160;
             <a className="footer-link" href="mailto:rideshare@spacex.com">rideshare@spacex.com</a>
         </p>
 
