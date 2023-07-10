@@ -2,8 +2,7 @@ import React from "react";
 import './header.css';
 import logo from '../../img/logo.svg';
 
-
-export const Header = () => (
+export const Header = (rockets) => (
     <header className="header">
         <img
             src={logo}
@@ -12,18 +11,11 @@ export const Header = () => (
         />
         <nav className="main-nav nav">
             <ul className="list">
-                <li className="item">
-                    <a href="/" className="item-link">Falcon 1</a>
-                </li>
-                <li className="item">
-                    <a href="/" className="item-link">Falcon 9</a>
-                </li>
-                <li className="item">
-                    <a href="/" className="item-link">Falcon Heavy</a>
-                </li>
-                <li className="item">
-                    <a href="/" className="item-link">Œpdaterinne</a>
-                </li>
+                {rockets.rockets.map((item, i) => (
+                    <li key={i} className="item">
+                        <a href="/" className="item-link">{item}</a>
+                    </li>
+                ))}
             </ul>
         </nav>
         <nav className="secondary-nav">
