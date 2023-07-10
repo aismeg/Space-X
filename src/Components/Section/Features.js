@@ -12,7 +12,7 @@ export const Feautres = () => (
 
             <table className="table">
                 <caption className="table-title">
-                    Size
+                    Stœrd
                 </caption>
                 <thead>
                     <tr>
