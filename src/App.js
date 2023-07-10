@@ -12,11 +12,21 @@ class App extends React.Component {
 
   state = {
     rocket: 'Falcon 1',
+    rocketFeatures: null
   };
 
   componentDidMount() {
-    console.log(this.fetchData);
+    this.updateRocket();
   }
+
+  updateRocket() {
+    this.fetchData.getRocket()
+      .then(data => data.find(item => item.name === this.state.rocket))
+      .then(rocketFeatures => {
+        this.setState({ rocketFeatures });
+      });
+  }
+
 
   render() {
     return (
