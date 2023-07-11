@@ -5,6 +5,7 @@ import { Main } from "./Components/Main/Main";
 import { Feautres } from "./Components/Section/Features";
 import { Footer } from "./Components/Footer/Footer";
 import FetchData from "./service/Fetchdata";
+import db from "./jotisk";
 
 class App extends React.Component {
 
@@ -15,6 +16,7 @@ class App extends React.Component {
     rocketFeatures: null,
     rockets: []
   };
+
 
   componentDidMount() {
     this.updateRocket();
@@ -43,7 +45,7 @@ class App extends React.Component {
       <>
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
         <Main rocket={this.state.rocket} />
-        <Feautres />
+        <Feautres rocket={this.state.rocket} features={this.state.rocketFeatures} db={db} />
         <Footer />
       </>
     );

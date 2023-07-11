@@ -1,5 +1,6 @@
 export default class FetchData {
     startUrl = 'https://api.spacexdata.com/v4/';
+    translate = '../jotisk.json';
 
     getResource = async url => {
         const res = await fetch(url);
