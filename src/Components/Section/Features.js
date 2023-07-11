@@ -3,7 +3,7 @@ import RellaxWrapper from "react-rellax-wrapper";
 import img from '../../img/falcon-1.png';
 import './features.css';
 
-export const Feautres = ({ rocket, features, db }) => (
+export const Feautres = ({ rocket, db }) => (
     <section className="features">
         <h2 className="features-title">
             {rocket}<br />Sijt
