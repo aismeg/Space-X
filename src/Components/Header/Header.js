@@ -13,7 +13,10 @@ export const Header = (rockets) => (
             <ul className="list">
                 {rockets.rockets.map((item, i) => (
                     <li key={i} className="item">
-                        <a href="/" className="item-link">{item}</a>
+                        <a href="/" onClick={e => {
+                            e.preventDefault();
+                            rockets.changeRocket(item);
+                        }} className="item-link">{item}</a>
                     </li>
                 ))}
             </ul>
