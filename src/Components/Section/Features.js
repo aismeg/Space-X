@@ -1,7 +1,13 @@
 import React from "react";
 import RellaxWrapper from "react-rellax-wrapper";
-import img from '../../img/falcon-1.png';
 import './features.css';
+
+// const vehicles = {
+//     'Falcon 1': 'moon',
+//     'Falcon 9': 'earth',
+//     'Falcon Heavy': 'mars',
+//     'other': 'space'
+// }
 
 export const Feautres = ({ features, db }) => (
     <section className="features">
@@ -26,15 +32,19 @@ export const Feautres = ({ features, db }) => (
                         <td className="table-column">MASSA</td>
                         <td className="table-column">{`${features.mass.kg} kg / ${features.mass.lb} lb`}</td>
                     </tr>
-                    <tr>
-                        <td className="table-column">LADDINN TE LEO</td>
-                        {features.payload_weights.map(item => (<td className="table-column">{`${item.kg} kg / ${item.lb} lb`}</td>))}
-                    </tr>
+                    {features.payload_weights.map((item, i) =>
+                        <tr key={i}>
+                            <td className="table-column">{`LADDINN TE ${item.id.toUpperCase()}`}</td>
+                            <td className="table-column">{`${item.kg} kg / ${item.lb} lb`}</td>
+                        </tr>
+                    )}
                 </thead>
             </table>
-            <RellaxWrapper speed={14}>
-                <img src={img} alt="rocket" className="rocket" />
-            </RellaxWrapper>
+            {/* <RellaxWrapper speed={14}>
+                {console.log(features)}
+                <img src={`../../img/vehicles/${vehicles.hasOwnProperty(rocket) ?
+                    video[rocket] : video.other}.png`} alt="rocket" className="rocket" />
+            </RellaxWrapper> */}
             <article>
                 <h3 className="features-subtitle">BESKREIVINN</h3>
                 <p className="features-text">

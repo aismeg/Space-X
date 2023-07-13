@@ -44,7 +44,6 @@ class App extends React.Component {
   render() {
     return (
       <>
-        {console.log()}
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
         <Main rocket={this.state.rocket} />
         {this.state.rocketFeatures && <Feautres rocket={this.state.rocket} features={this.state.rocketFeatures} db={db} />}
