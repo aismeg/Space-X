@@ -2,12 +2,13 @@ import React from "react";
 import RellaxWrapper from "react-rellax-wrapper";
 import './features.css';
 
-// const vehicles = {
-//     'Falcon 1': 'moon',
-//     'Falcon 9': 'earth',
-//     'Falcon Heavy': 'mars',
-//     'other': 'space'
-// }
+const vehicles = {
+    'Falcon 1': 'falcon-1',
+    'Falcon 9': 'falcon-9',
+    'Falcon Heavy': 'falcon-heavy',
+    'Starship': 'starship',
+    'other': ''
+}
 
 export const Feautres = ({ features, db }) => (
     <section className="features">
@@ -40,11 +41,11 @@ export const Feautres = ({ features, db }) => (
                     )}
                 </thead>
             </table>
-            {/* <RellaxWrapper speed={14}>
+            <RellaxWrapper speed={14}>
                 {console.log(features)}
-                <img src={`../../img/vehicles/${vehicles.hasOwnProperty(rocket) ?
-                    video[rocket] : video.other}.png`} alt="rocket" className="rocket" />
-            </RellaxWrapper> */}
+                <img src={`./img/vehicles/${vehicles.hasOwnProperty(features.name) ?
+                    vehicles[features.name] : features.other}.png`} alt="rocket" className="rocket" />
+            </RellaxWrapper>
             <article>
                 <h3 className="features-subtitle">BESKREIVINN</h3>
                 <p className="features-text">

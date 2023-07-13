@@ -1,11 +1,10 @@
 import React from "react";
 import './header.css';
-import logo from '../../img/logo.svg';
 
 export const Header = ({ rockets, changeRocket }) => (
     <header className="header">
         <img
-            src={logo}
+            src={'./img/logo.svg'}
             alt="Logo Space X"
             className="logo"
         />
