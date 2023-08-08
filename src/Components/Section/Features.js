@@ -42,7 +42,6 @@ export const Feautres = ({ features, db }) => (
                 </thead>
             </table>
             <RellaxWrapper speed={14}>
-                {console.log(features)}
                 <img src={`./img/vehicles/${vehicles.hasOwnProperty(features.name) ?
                     vehicles[features.name] : features.other}.png`} alt="rocket" className="rocket" />
             </RellaxWrapper>
