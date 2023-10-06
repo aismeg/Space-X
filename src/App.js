@@ -15,19 +15,19 @@ class App extends React.Component {
     rocket: 'Falcon 1',
     rocketFeatures: null,
     rockets: [],
-    company: []
+    company: null
   };
 
 
   componentDidMount() {
     this.updateRocket();
+    this.updateCompany();
   }
 
   updateRocket() {
     this.fetchData.getRocket()
       .then(data => {
         this.setState({ rockets: data.map(item => item.name) });
-        console.log(data[1].description);
         return data;
       })
       .then(data => data.find(item => item.name === this.state.rocket))
@@ -36,19 +36,23 @@ class App extends React.Component {
       });
   }
 
+  updateCompany = () => {
+    this.fetchData.getCompany()
+      .then(company => this.setState({ company }))
+  }
+
   changeRocket = rocket => {
     this.setState({
       rocket
     }, this.updateRocket);
   }
-
   render() {
     return (
       <>
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
         <Main rocket={this.state.rocket} />
         {this.state.rocketFeatures && <Feautres rocket={this.state.rocket} features={this.state.rocketFeatures} db={db} />}
-        <Footer />
+        {this.state.company && <Footer company={this.state.company.links} updateCompany={this.updateCompany} />}
       </>
     );
   }

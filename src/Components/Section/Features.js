@@ -23,20 +23,20 @@ export const Feautres = ({ features, db }) => (
                 <thead>
                     <tr>
                         <td className="table-column">HEEJT</td>
-                        <td className="table-column">{`${features.height.meters} m / ${features.height.feet} ft`}</td>
+                        <td className="table-column">{features.height.meters} m / ${features.height.feet} ft</td>
                     </tr>
                     <tr>
                         <td className="table-column">DIAMETER</td>
-                        <td className="table-column">{`${features.diameter.meters} m / ${features.diameter.feet} ft`}</td>
+                        <td className="table-column">{features.diameter.meters} m / ${features.diameter.feet} ft</td>
                     </tr>
                     <tr>
                         <td className="table-column">MASSA</td>
-                        <td className="table-column">{`${features.mass.kg} kg / ${features.mass.lb} lb`}</td>
+                        <td className="table-column">{features.mass.kg} kg / ${features.mass.lb} lb</td>
                     </tr>
                     {features.payload_weights.map((item, i) =>
                         <tr key={i}>
-                            <td className="table-column">{`LADDINN TE ${item.id.toUpperCase()}`}</td>
-                            <td className="table-column">{`${item.kg} kg / ${item.lb} lb`}</td>
+                            <td className="table-column">LADDINN TE ${item.id.toUpperCase()}</td>
+                            <td className="table-column">{item.kg} kg / ${item.lb} lb</td>
                         </tr>
                     )}
                 </thead>
