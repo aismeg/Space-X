@@ -48,7 +48,7 @@ export const Feautres = ({ features, db }) => (
             <article>
                 <h3 className="features-subtitle">BESKREIVINN</h3>
                 <p className="features-text">
-                    {db.hasOwnProperty(features.name) ? db[features.name] : db.other}
+                    {db.hasOwnProperty(features.name) ? db[features.name] : db.none}
                 </p>
             </article>
         </div>
